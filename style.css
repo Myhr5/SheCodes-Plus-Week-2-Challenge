@@ -34,3 +34,11 @@ header {
   width: 38;
   height: 38;
 }
+
+.ph-sun {
+  font-size: 30px;
+}
+
+#weather_other_days {
+  justify-content: center;
+}
