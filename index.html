@@ -13,6 +13,12 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -61,7 +67,22 @@
                 <p>Saturday <span>11:29</span></p>
               </div>
             </div>
-            <div id="weather_screen_main"></div>
+            <div id="weather_screen_main" class="row">
+              <div class="row col-6">
+                <div id="actual_weather_icon" class="col-4">
+                  <i class="ph-bold ph-cloud-sun"></i>
+                </div>
+                <div class="col-4">
+                  <p>Caucaia</p>
+                  <p>29°C</p>
+                </div>
+              </div>
+              <div id="other_informations" class="col-6">
+                <p>Mostly cloudy</p>
+                <p>Precipitation: 39%</p>
+                <p>Wind: 21 km/h</p>
+              </div>
+            </div>
             <div id="weather_other_days" class="row"></div>
           </div>
         </main>
