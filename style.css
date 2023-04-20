@@ -72,7 +72,7 @@ a {
 #weather_screen_header {
   margin: 15px auto;
 }
-#weather_screen_main{
+#weather_screen_main {
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -96,17 +96,16 @@ a {
   right: -5px;
 }
 
-#actual_weather_icon{
+#actual_weather_icon {
   display: flex;
   align-items: baseline;
   justify-content: right;
-  
+
   font-size: 70px;
 }
 
-
 #city_choose,
-#temperature{
+#temperature {
   font-size: 50px;
   margin: 0;
   text-align: left;
@@ -114,7 +113,7 @@ a {
   line-height: 50px;
 }
 
-#informations{
+#informations {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
