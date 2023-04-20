@@ -7,6 +7,10 @@
   --font_color: #878787;
 }
 
+* {
+  font-family: "Carlito", sans-serif;
+}
+
 #weather_container {
   padding: 2.5rem 2.25rem 2.625rem;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
@@ -25,7 +29,7 @@ ul {
 
 a {
   padding-right: 30px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 
@@ -49,17 +53,14 @@ a {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   margin-left: 1rem;
   padding: 0.4rem 0.9rem;
-  font-size: 17px;
-}
-
-#current_button {
-  padding-left: 0;
+  font-size: 19px;
 }
 
 .current {
   background-color: transparent;
   color: var(--blue);
   border: 1px solid var(--blue);
+  font: 17px;
 }
 
 .current:hover {
@@ -70,14 +71,25 @@ a {
 }
 
 #weather_screen_header {
-  margin: 15px auto;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+#current_city_weather,
+#current_button {
+  padding-left: 0;
+}
+
+#current_city_weather {
+  max-width: 260px;
 }
 
 #current_city_weather p {
-  position: relative;
-  font-size: 22px;
-  top: 3.5px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 #current_city_weather i {
@@ -86,14 +98,16 @@ a {
 
 #current_time {
   text-align: right;
-  position: relative;
-  top: 3px;
+  font-size: 17px;
+  padding-right: 0;
+}
+
+#current_time p {
+  margin-bottom: 0;
 }
 
 .ph-cloud-sun {
-  font-size: 50px;
-  width: 38;
-  height: 38;
+  font-size: 70px;
 }
 
 .ph-sun {
