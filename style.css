@@ -72,6 +72,10 @@ a {
 #weather_screen_header {
   margin: 15px auto;
 }
+#weather_screen_main{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
 
 #current_city_weather p {
   position: relative;
@@ -87,15 +91,34 @@ a {
 #current_time {
   text-align: right;
   position: relative;
-  top: 3px;
+  top: 10px;
+  padding-right: 0;
+  right: -5px;
 }
 
-.ph-cloud-sun {
+#actual_weather_icon{
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  
+  font-size: 70px;
+}
+
+
+#city_choose,
+#temperature{
   font-size: 50px;
-  width: 38;
-  height: 38;
+  margin: 0;
+  text-align: left;
+  font-weight: 500;
+  line-height: 50px;
 }
 
+#informations{
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
 .ph-sun {
   font-size: 30px;
 }
