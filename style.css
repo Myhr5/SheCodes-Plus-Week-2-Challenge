@@ -1,14 +1,16 @@
 :root {
   --dark_blue: #070f4e;
-  --blue: #007bff;
-  --green: #3ab1c8;
-  --white: #ffffff;
+  --blue: #232b6e;
   --dirty_white: #f5ebeb;
   --font_color: #878787;
 }
 
+* {
+  font-family: "Carlito", sans-serif;
+}
+
 #weather_container {
-  padding: 2.5rem 2.25rem 2.625rem;
+  padding: 2.5rem 2.25rem 2rem;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   max-width: 40rem;
   margin: 1.25rem 0;
@@ -27,6 +29,10 @@ a {
   padding-right: 30px;
   font-size: 1rem;
   text-decoration: none;
+}
+
+i {
+  color: var(--dark_blue);
 }
 
 #city {
@@ -71,17 +77,21 @@ a {
 
 #weather_screen_header {
   margin: 15px auto;
+  color: var(--blue);
 }
+
 #weather_screen_main {
   margin-bottom: 20px;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 #current_city_weather p {
   position: relative;
   font-size: 22px;
   top: 3.5px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 #current_city_weather i {
@@ -97,11 +107,8 @@ a {
 }
 
 #actual_weather_icon {
-  display: flex;
-  align-items: baseline;
   justify-content: right;
-
-  font-size: 70px;
+  font-size: 80px;
 }
 
 #city_choose,
@@ -109,19 +116,53 @@ a {
   font-size: 50px;
   margin: 0;
   text-align: left;
-  font-weight: 500;
   line-height: 50px;
+  color: var(--blue);
+}
+
+#city_choose {
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--dark_blue);
 }
 
 #informations {
-  padding: 0 2rem;
+  padding-left: 4rem;
   display: flex;
   flex-direction: column;
 }
-.ph-sun {
-  font-size: 30px;
+
+#weather_description {
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  color: var(--dark_blue);
+}
+
+#other_informations p {
+  margin: 0;
+  font-size: 24px;
+  color: var(--blue);
 }
 
 #weather_other_days {
+  margin-top: 30px;
+  text-align: center;
   justify-content: center;
+}
+
+.other_days {
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.other_days i {
+  font-size: 50px;
+}
+
+.other_days p {
+  margin-bottom: 5px;
+  color: var(--font_color);
 }
