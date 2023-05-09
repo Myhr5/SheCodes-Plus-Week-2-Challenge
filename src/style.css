@@ -35,7 +35,7 @@ i {
   color: var(--dark_font_color);
 }
 
-#city {
+#new_city {
   border: none;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   height: 2.75rem;
@@ -85,6 +85,18 @@ i {
   margin-top: 10px;
   display: flex;
   align-items: center;
+}
+#change_scale {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+#celsius,
+#fahrenheit {
+  padding-right: 0px;
+  font-size: 25px;
 }
 
 #current_city_weather p {

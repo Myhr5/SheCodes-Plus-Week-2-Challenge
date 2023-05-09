@@ -1,53 +1,84 @@
-let weather = {
-  lisbon: {
-    temp: 14,
-    humidity: 28,
-  },
-  paris: {
-    temp: -10,
-    humidity: 20,
-  },
-  sydney: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  fortaleza: {
-    temp: 26,
-    humidity: 89,
-  },
-};
+let currentCityTemperature = document.querySelector(
+  "#current_temperature_number"
+);
+let temperature = document.querySelector("#temperature_number");
 
-function convertTemp(temp) {
-  return temp * 1.8 + 32;
+// Update date and time
+let curretTime = document.querySelector("#current_time_text");
+
+function formatDate(newDate) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[newDate.getDay()];
+
+  let hour = newDate.getHours();
+  let minute = newDate.getMinutes();
+
+  return `${day} ${hour}:${minute}`;
 }
 
-function lookForCity(city) {
-  let find = false;
+curretTime.innerHTML = formatDate(new Date());
 
-  for (const key in weather) {
-    if (key === city) {
-      find = true;
-      let cityWeather = weather[key];
+// Update city name
+function changeCity(event) {
+  event.preventDefault();
 
-      let f = convertTemp(cityWeather.temp);
-      f = Math.round(f);
+  let newCity = document.querySelector("#new_city");
+  let city = document.querySelector("#city_choose");
 
-      return alert(
-        `It is currently ${cityWeather.temp}°C (${f}°F) in Paris with a humidity of ${cityWeather.humidity}%`
-      );
-    }
-  }
+  city.innerHTML = newCity.value.trim();
 
-  if (!find) {
-    alert(
-      `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-    );
+  if (temperature.innerHTML == 29) {
+    temperature.innerHTML = 20;
+  } else if (temperature.innerHTML == 84.2) {
+    temperature.innerHTML = 68;
   }
 }
 
-let city = prompt("Enter a city: ");
-lookForCity(city.toLowerCase().trim());
+let inputCity = document.querySelector("#input_city");
+inputCity.addEventListener("submit", changeCity);
+
+// Change temperature scale
+let scale = document.querySelectorAll(".scale");
+
+function changeToFahrenheit(event) {
+  event.preventDefault();
+
+  currentCityTemperature.innerHTML = 84.2;
+  if (temperature.innerHTML == 29) {
+    temperature.innerHTML = 84.2;
+  } else if (temperature.innerHTML == 20) {
+    temperature.innerHTML = 68;
+  }
+
+  scale[0].innerHTML = "F";
+  scale[1].innerHTML = "F";
+}
+
+function changeToCelsius(event) {
+  event.preventDefault();
+
+  currentCityTemperature.innerHTML = 29;
+
+  if (temperature.innerHTML == 84.2) {
+    temperature.innerHTML = 29;
+  } else if (temperature.innerHTML == 68) {
+    temperature.innerHTML = 20;
+  }
+
+  scale[0].innerHTML = "C";
+  scale[1].innerHTML = "C";
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeToCelsius);

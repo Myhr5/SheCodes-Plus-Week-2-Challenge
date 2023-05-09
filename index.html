@@ -54,7 +54,7 @@
         <main>
           <div id="input_city">
             <form action="submit">
-              <input type="text" id="city" placeholder="Enter a city" />
+              <input type="text" id="new_city" placeholder="Enter a city" />
               <input
                 type="submit"
                 class="btn btn-primary search"
@@ -69,15 +69,24 @@
                   Current
                 </button>
               </div>
-              <div class="col-md-5 row" id="current_city_weather">
-                <p>
+              <div class="col-md-6 row" id="current_city_weather">
+                <p id="current_city">
                   Caucaia
                   <i class="ph-bold ph-cloud-sun"></i>
-                  <span> 29°C </span>
+                  <span id="current_city_temperature">
+                    <span id="current_temperature_number">29</span>°<span
+                      class="scale"
+                      >C</span
+                    ></span
+                  >
+                  <span id="change_scale"
+                    ><a id="celsius" href="">°C</a> |
+                    <a id="fahrenheit" href="">°F</a></span
+                  >
                 </p>
               </div>
-              <div class="col-md-5" id="current_time">
-                <p>Saturday <span>11:29</span></p>
+              <div class="col-md-4" id="current_time">
+                <p id="current_time_text">Saturday 11:29</p>
               </div>
             </div>
             <div id="weather_screen_main" class="row">
@@ -87,7 +96,11 @@
                 </div>
                 <div class="col-6">
                   <p id="city_choose">Caucaia</p>
-                  <p id="temperature">29°C</p>
+                  <p id="temperature">
+                    <span id="temperature_number">29</span>°<span class="scale"
+                      >C</span
+                    >
+                  </p>
                 </div>
               </div>
               <div id="informations" class="col-6">
