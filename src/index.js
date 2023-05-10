@@ -42,26 +42,45 @@ function changeCity(event) {
 
 let inputCity = document.querySelector("#input_city");
 inputCity.addEventListener("submit", changeCity);
-// Get current temperature
 
+// Get current temperature
+function currentWeather (response){
+  let currentCity = document.querySelector("#current_city");
+  let temperature = Math.round(response.data.main.temp);
+
+  let cityElement = document.querySelector("#city_choose");
+  let temperatureElement = document.querySelector("#temperature_number");
+
+  console.log((response.data.name), temperature);
+
+  currentCity.innerHTML = `${response.data.name} ${temperature}°C`;
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = temperature;
+  
+ }
 
 // Get current location
-function getCurrentPosition(position){
+function getUrlPosition(position){
   let apiKey = "b35c686ba9565ba0ab254c2230937552";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
-  let currentCity = document.querySelector("#current_city")
-
-
-  axios.get(url).then(showWeather);
+  axios.get(url).then(currentWeather);
 }
 
-navigator.geolocation.getCurrentPosition(getCurrentPosition);
+
+navigator.geolocation.getCurrentPosition(getUrlPosition);
+
+// Get current city weather informations
+function searchCurrentCity (event){
+  event.preventDefault();
+
+ navigator.geolocation.getCurrentPosition(getUrlPosition);
+}
 
 let currentButton = document.querySelector("#button_current");
-currentButton.addEventListener("click", getCurrentPosition);
+currentButton.addEventListener("click", searchCurrentCity);
 
 
 
