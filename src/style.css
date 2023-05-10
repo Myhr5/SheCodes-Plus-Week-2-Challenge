@@ -31,9 +31,9 @@ a {
   text-decoration: none;
 }
 
-i {
+/* i {
   color: var(--dark_font_color);
-}
+} */
 
 #new_city {
   border: none;
@@ -86,7 +86,8 @@ i {
   display: flex;
   align-items: center;
 }
-#change_scale {
+
+/* #change_scale {
   display: inline-block;
   padding-right: 10px;
   padding-left: 20px;
@@ -97,7 +98,7 @@ i {
 #fahrenheit {
   padding-right: 0px;
   font-size: 25px;
-}
+} */
 
 #current_city_weather p {
   position: relative;
@@ -126,10 +127,10 @@ i {
   right: -5px;
 }
 
-#actual_weather_icon {
+/* #actual_weather_icon {
   justify-content: right;
   font-size: 80px;
-}
+} */
 
 #city_choose,
 #temperature {
@@ -166,7 +167,7 @@ i {
   color: var(--font_color);
 }
 
-#weather_other_days {
+/* #weather_other_days {
   margin-top: 30px;
   text-align: center;
   justify-content: center;
@@ -185,4 +186,4 @@ i {
 .other_days p {
   margin-bottom: 5px;
   color: var(--font_color);
-}
+} */
