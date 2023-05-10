@@ -46,22 +46,23 @@ inputCity.addEventListener("submit", changeCity);
 
 
 // Get current location
-function getCurrentPosition(position){
+function getPosition(position){
   let apiKey = "b35c686ba9565ba0ab254c2230937552";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
-  let currentCity = document.querySelector("#current_city")
+  console.log(lat, lon);
+  // let currentCity = document.querySelector("#current_city")
 
 
-  axios.get(url).then(showWeather);
+  // axios.get(url).then(showWeather);
 }
 
-navigator.geolocation.getCurrentPosition(getCurrentPosition);
+navigator.geolocation.getCurrentPosition(getPosition);
 
 let currentButton = document.querySelector("#button_current");
-currentButton.addEventListener("click", getCurrentPosition);
+currentButton.addEventListener("click", getPosition);
 
 
 
