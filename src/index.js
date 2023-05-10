@@ -34,12 +34,6 @@ function changeCity(event) {
   let city = document.querySelector("#city_choose");
 
   city.innerHTML = newCity.value.trim();
-
-  if (temperature.innerHTML == 29) {
-    temperature.innerHTML = 20;
-  } else if (temperature.innerHTML == 84.2) {
-    temperature.innerHTML = 68;
-  }
 }
 
 let inputCity = document.querySelector("#input_city");
