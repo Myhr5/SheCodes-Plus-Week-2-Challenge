@@ -159,6 +159,7 @@ a {
   font-size: 29px;
   color: var(--dark_font_color);
   margin-bottom: 0;
+  max-width: 220px;
 }
 
 #other_informations p {
