@@ -31,9 +31,9 @@ a {
   text-decoration: none;
 }
 
-/* i {
+i {
   color: var(--dark_font_color);
-} */
+}
 
 #new_city {
   border: none;
@@ -127,10 +127,10 @@ a {
   right: -5px;
 }
 
-/* #actual_weather_icon {
+#actual_weather_icon {
   justify-content: right;
   font-size: 80px;
-} */
+}
 
 #city_choose,
 #temperature {
@@ -159,6 +159,7 @@ a {
   font-size: 29px;
   color: var(--dark_font_color);
   margin-bottom: 0;
+  max-width: 220px;
 }
 
 #other_informations p {
@@ -167,7 +168,7 @@ a {
   color: var(--font_color);
 }
 
-/* #weather_other_days {
+#weather_other_days {
   margin-top: 30px;
   text-align: center;
   justify-content: center;
@@ -186,4 +187,15 @@ a {
 .other_days p {
   margin-bottom: 5px;
   color: var(--font_color);
-} */
+}
+
+.git_link a {
+  padding-right: 0;
+  font-size: small;
+}
+
+.git_link {
+  font-size: small;
+  position: relative;
+  margin-top: -15px;
+}

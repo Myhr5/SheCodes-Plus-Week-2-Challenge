@@ -31,7 +31,6 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  </head>
   <body>
     <div class="container">
       <div id="weather_container">
@@ -68,14 +67,18 @@
           <div id="weather_screen">
             <div id="weather_screen_header" class="row">
               <div class="col-md-2" id="current_button">
-                <button type="button" class="btn btn-primary current" id="button_current">
+                <button
+                  type="button"
+                  class="btn btn-primary current"
+                  id="button_current"
+                >
                   Current
                 </button>
               </div>
               <div class="col-md-6 row" id="current_city_weather">
                 <p id="current_city">
                   Caucaia
-                  <!-- <i class="ph-bold ph-cloud-sun"></i> -->
+                  <i class="ph-bold ph-cloud-sun"></i>
                   <span id="current_city_temperature">
                     <span id="current_temperature_number">29</span>°<span
                       class="scale"
@@ -89,13 +92,13 @@
                 </p>
               </div>
               <div class="col-md-4" id="current_time">
-                <p id="current_time_text">Saturday 11:29</p>
+                <p id="current_time_text"></p>
               </div>
             </div>
             <div id="weather_screen_main" class="row">
               <div class="row col-6">
                 <div id="actual_weather_icon" class="col-4">
-                  <!-- <i class="ph-bold ph-cloud-sun"></i> -->
+                  <i class="ph-bold ph-cloud-sun"></i>
                 </div>
                 <div class="col-6">
                   <p id="city_choose">Caucaia</p>
@@ -107,14 +110,14 @@
                 </div>
               </div>
               <div id="informations" class="col-6">
-                <p id="weather_description">Mostly cloudy</p>
+                <p id="weather_description"></p>
                 <div id="other_informations">
-                  <p>Precipitation: 39%</p>
-                  <p>Wind: 21 km/h</p>
+                  <p>Humidity: <span id="humidity"></span>%</p>
+                  <p>Wind: <span id="wind"></span> km/h</p>
                 </div>
               </div>
             </div>
-            <!-- <div id="weather_other_days" class="row">
+            <div id="weather_other_days" class="row">
               <div class="col-2 other_days">
                 <p>Sun</p>
                 <i class="ph-bold ph-sun-dim"></i>
@@ -140,10 +143,17 @@
                 <i class="ph-bold ph-cloud-lightning"></i>
                 <p>27°</p>
               </div>
-            </div> -->
+            </div>
           </div>
         </main>
       </div>
+      <footer class="git_link">
+        <p>
+          <a href="https://github.com/Myhr5/Weather-App-Vanilla-Js.git"
+            >Open-source code</a
+          >, by Mirele Fernandes
+        </p>
+      </footer>
     </div>
     <script src="./src/index.js"></script>
   </body>
