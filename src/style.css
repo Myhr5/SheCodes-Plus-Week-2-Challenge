@@ -9,11 +9,18 @@
   font-family: "Carlito", sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  max-width: 50rem;
+}
+
 #weather_container {
   padding: 2.5rem 2.25rem 2rem;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   max-width: 40rem;
-  margin: 1.25rem 0;
 }
 
 header {
@@ -75,46 +82,48 @@ i {
   border: 1px solid var(--blue);
 }
 
+#weather_screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #weather_screen_header {
-  margin: 15px auto;
+  display: flex;
+  align-items: center;
+
+  margin: 15px 2px;
   color: var(--font_color);
 }
 
 #weather_screen_main {
+  display: flex;
+  justify-content: space-around;
+
   margin-bottom: 20px;
   margin-top: 10px;
-  display: flex;
-  align-items: center;
 }
-
-/* #change_scale {
-  display: inline-block;
-  padding-right: 10px;
-  padding-left: 20px;
-  margin: 0;
-}
-
-#celsius,
-#fahrenheit {
-  padding-right: 0px;
-  font-size: 25px;
-} */
 
 #current_city_weather p {
+  display: flex;
   position: relative;
+  top: 7px;
+
   font-size: 22px;
-  top: 3.5px;
   font-weight: 700;
   padding-left: 0px;
   margin-left: 0px;
 }
 
-#current_city_weather i {
-  font-size: 16px;
-  color: var(--font_color);
+#current_city_weather img {
+  width: 25%;
 }
 
 #current_city_weather {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
   padding-left: 0px;
   margin-left: 0px;
 }
@@ -127,9 +136,45 @@ i {
   right: -5px;
 }
 
+#actual_weather_icon img {
+  width: 95px;
+  height: 105px;
+}
+
 #actual_weather_icon {
-  justify-content: right;
-  font-size: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.units {
+  position: relative;
+  top: -10px;
+
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  margin-left: 2px;
+}
+
+.units a {
+  padding-right: 0;
+  margin: 2px;
+  font-size: 30px;
+  color: var(--blue);
+}
+
+.units a:hover {
+  text-decoration: underline;
+  color: var(--dark_font_color);
+}
+
+.units .active {
+  color: var(--dark_font_color);
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
 }
 
 #city_choose,
@@ -141,6 +186,11 @@ i {
   color: var(--dark_font_color);
 }
 
+#temperature {
+  display: flex;
+  flex-direction: row;
+}
+
 #city_choose {
   font-size: 40px;
   font-family: "Inter", sans-serif;
@@ -148,9 +198,10 @@ i {
 }
 
 #informations {
-  padding-left: 4rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
 }
 
 #weather_description {
@@ -196,6 +247,9 @@ i {
 
 .git_link {
   font-size: small;
-  position: relative;
-  margin-top: -15px;
+
+  display: flex;
+  align-self: baseline;
+
+  margin: 10px 4.6rem;
 }

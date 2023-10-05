@@ -34,25 +34,25 @@
   <body>
     <div class="container">
       <div id="weather_container">
-        <header>
+        <!-- <header>
           <ul class="navigatio_item">
             <il class="navigatio_item">
-              <a href="/">Lisbon</a>
+              <a href="#">Lisbon</a>
             </il>
             <il class="navigatio_item">
-              <a href="/">Paris</a>
+              <a href="#">Paris</a>
             </il>
             <il class="navigatio_item">
-              <a href="/">Sydney</a>
+              <a href="#">Sydney</a>
             </il>
             <il class="navigatio_item">
-              <a href="/">San Francisco</a>
+              <a href="#">San Francisco</a>
             </il>
             <il class="navigatio_item">
-              <a href="/">Fortaleza</a>
+              <a href="#">Fortaleza</a>
             </il>
           </ul>
-        </header>
+        </header> -->
         <main>
           <div id="input_city">
             <form action="submit">
@@ -76,20 +76,13 @@
                 </button>
               </div>
               <div class="col-md-6 row" id="current_city_weather">
-                <p id="current_city">
-                  Caucaia
-                  <i class="ph-bold ph-cloud-sun"></i>
-                  <span id="current_city_temperature">
-                    <span id="current_temperature_number">29</span>°<span
-                      class="scale"
-                      >C</span
-                    ></span
-                  >
-                  <!-- <span id="change_scale"
-                    ><a id="celsius" href="">°C</a> |
-                    <a id="fahrenheit" href="">°F</a></span
-                  > -->
-                </p>
+                <img
+                  class="current_weather_icon"
+                  src=""
+                  alt=""
+                  id="current_icon"
+                />
+                <p id="current_city"></p>
               </div>
               <div class="col-md-4" id="current_time">
                 <p id="current_time_text"></p>
@@ -98,14 +91,17 @@
             <div id="weather_screen_main" class="row">
               <div class="row col-6">
                 <div id="actual_weather_icon" class="col-4">
-                  <i class="ph-bold ph-cloud-sun"></i>
+                  <img src="" alt="#" id="icon" />
                 </div>
-                <div class="col-6">
+                <div class="col-7">
                   <p id="city_choose">Caucaia</p>
                   <p id="temperature">
-                    <span id="temperature_number">29</span>°<span class="scale"
-                      >C</span
-                    >
+                    <span id="temperature_number">29</span>
+                    <span class="units">
+                      <a href="#" id="celsius-link" class="active"> °C </a>
+                      |
+                      <a href="#" id="fahrenheit-link"> °F </a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -117,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div id="weather_other_days" class="row">
+            <!-- <div id="weather_other_days" class="row">
               <div class="col-2 other_days">
                 <p>Sun</p>
                 <i class="ph-bold ph-sun-dim"></i>
@@ -143,7 +139,7 @@
                 <i class="ph-bold ph-cloud-lightning"></i>
                 <p>27°</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
       </div>
