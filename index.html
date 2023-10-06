@@ -34,25 +34,6 @@
   <body>
     <div class="container">
       <div id="weather_container">
-        <!-- <header>
-          <ul class="navigatio_item">
-            <il class="navigatio_item">
-              <a href="#">Lisbon</a>
-            </il>
-            <il class="navigatio_item">
-              <a href="#">Paris</a>
-            </il>
-            <il class="navigatio_item">
-              <a href="#">Sydney</a>
-            </il>
-            <il class="navigatio_item">
-              <a href="#">San Francisco</a>
-            </il>
-            <il class="navigatio_item">
-              <a href="#">Fortaleza</a>
-            </il>
-          </ul>
-        </header> -->
         <main>
           <div id="input_city">
             <form action="submit">
@@ -82,7 +63,11 @@
                   alt=""
                   id="current_icon"
                 />
-                <p id="current_city"></p>
+                <div class="row-cols-6">
+                  <span id="current_city"></span>
+                  <span id="current_temperature"></span>
+                  <span id="current_unit"></span>
+                </div>
               </div>
               <div class="col-md-4" id="current_time">
                 <p id="current_time_text"></p>
@@ -109,37 +94,13 @@
                 <p id="weather_description"></p>
                 <div id="other_informations">
                   <p>Humidity: <span id="humidity"></span>%</p>
-                  <p>Wind: <span id="wind"></span> km/h</p>
+                  <p>
+                    Wind: <span id="wind"></span>
+                    <span id="wind_unit">km/h</span>
+                  </p>
                 </div>
               </div>
             </div>
-            <!-- <div id="weather_other_days" class="row">
-              <div class="col-2 other_days">
-                <p>Sun</p>
-                <i class="ph-bold ph-sun-dim"></i>
-                <p>31°</p>
-              </div>
-              <div class="col-2 other_days">
-                <p>Mon</p>
-                <i class="ph-bold ph-sun-dim"></i>
-                <p>30°</p>
-              </div>
-              <div class="col-2 other_days">
-                <p>Tue</p>
-                <i class="ph-bold ph-cloud-sun"></i>
-                <p>30°</p>
-              </div>
-              <div class="col-2 other_days">
-                <p>Wen</p>
-                <i class="ph-bold ph-cloud-lightning"></i>
-                <p>29°</p>
-              </div>
-              <div class="col-2 other_days">
-                <p>Thu</p>
-                <i class="ph-bold ph-cloud-lightning"></i>
-                <p>27°</p>
-              </div>
-            </div> -->
           </div>
         </main>
       </div>

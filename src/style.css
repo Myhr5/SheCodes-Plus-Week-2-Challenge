@@ -104,11 +104,9 @@ i {
   margin-top: 10px;
 }
 
-#current_city_weather p {
-  display: flex;
-  position: relative;
-  top: 7px;
-
+#current_city,
+#current_temperature,
+#current_unit {
   font-size: 22px;
   font-weight: 700;
   padding-left: 0px;
@@ -117,6 +115,8 @@ i {
 
 #current_city_weather img {
   width: 25%;
+  margin-right: -10px;
+  padding-right: 0px;
 }
 
 #current_city_weather {
@@ -216,27 +216,6 @@ i {
 #other_informations p {
   margin: 0;
   font-size: 24px;
-  color: var(--font_color);
-}
-
-#weather_other_days {
-  margin-top: 30px;
-  text-align: center;
-  justify-content: center;
-}
-
-.other_days {
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-}
-
-.other_days i {
-  font-size: 50px;
-}
-
-.other_days p {
-  margin-bottom: 5px;
   color: var(--font_color);
 }
 
